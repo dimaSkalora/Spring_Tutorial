@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    <!-- Definition for CollectionInjection -->
+    <bean id="collectionInjection" class="spring_framework.proselyte_net.lesson_10.collection_injection.CollectionInjection">
+        <!-- results in a setDocumentList(java.util.List) call -->
+        <property name="documentList">
+            <list>
+                <value>JSR 366</value>
+                <value>JSR 371</value>
+                <value>JSR 343</value>
+                <value>JSR 365</value>
+                <value>JSR 371</value>
+            </list>
+        </property>
+
+        <!-- results in a setDocumentSet(java.util.Set) call -->
+        <property name="documentSet">
+            <set>
+                <value>JSR 366</value>
+                <value>JSR 366</value>
+                <value>JSR 343</value>
+                <value>JSR 365</value>
+                <value>JSR 343</value>
+            </set>
+        </property>
+
+        <!-- results in a setDocumentMap(java.util.Map) call -->
+        <property name="documentMap">
+            <map>
+                <entry key="1" value="JSR 366"/>
+                <entry key="2" value="JSR 371"/>
+                <entry key="3" value="JSR 343"/>
+                <entry key="4" value="JSR 365"/>
+                <entry key="3" value="JSR 343"/>
+            </map>
+        </property>
+
+        <!-- results in a setDocumentProp(java.util.Properties) call -->
+        <property name="documentProp">
+            <props>
+                <prop key="one">JSR 366</prop>
+                <prop key="two">JSR 371</prop>
+                <prop key="three">JSR 343</prop>
+                <prop key="four">JSR 365</prop>
+                <prop key="two">JSR 371</prop>
+            </props>
+        </property>
+    </bean>
+</beans>
