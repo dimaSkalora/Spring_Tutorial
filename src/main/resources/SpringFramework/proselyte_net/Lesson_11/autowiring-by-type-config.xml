@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <!-- Definition for exam bean -->
+    <bean id="exam" class="spring_framework.proselyte_net.lesson_11.autowiring.by_type.Exam"
+          autowire="byType">
+        <property name="subject" value="Computer Science" />
+    </bean>
+
+    <!-- Definition for answerChecker bean -->
+    <bean id="answerChecker" class="spring_framework.proselyte_net.lesson_11.autowiring.by_type.AnswerChecker">
+    </bean>
+
+</beans>
