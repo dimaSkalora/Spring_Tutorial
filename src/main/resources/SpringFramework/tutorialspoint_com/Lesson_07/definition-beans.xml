@@ -1,0 +1,29 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+       xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <!-- A simple bean definition -->
+    <bean id = "helloWorld" class = "spring_framework.tutorialspoint_com.lesson_07.xml.HelloWorld">
+        <property name = "message" value = "Hello World!"/>
+    </bean>
+    <!-- A bean definition with lazy init set on -->
+    <bean id = "helloWorld_lazyInit" class = "spring_framework.tutorialspoint_com.lesson_07.xml.HelloWorld"
+            lazy-init="true">
+        <property name = "message" value = "Hello World!"/>
+    </bean>
+    <!-- A bean definition with initialization method -->
+    <bean id = "helloWorld_initialization" class = "spring_framework.tutorialspoint_com.lesson_07.xml.HelloWorld"
+            init-method="init">
+        <property name = "message" value = "Hello World!"/>
+    </bean>
+    <!-- A bean definition with destruction method -->
+    <bean id = "helloWorld_destruction" class = "spring_framework.tutorialspoint_com.lesson_07.xml.HelloWorld"
+           destroy-method="destroy">
+        <property name = "message" value = "Hello World!"/>
+    </bean>
+
+
+</beans>
