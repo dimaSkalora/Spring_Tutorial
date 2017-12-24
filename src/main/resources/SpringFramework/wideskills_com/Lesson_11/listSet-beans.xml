@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="State1" class="spring_framework.wideskills_com.lesson_11.xml.State">
+        <property name="name" value="United States" />
+        <property name="countryCode" value="+1" />
+    </bean>
+    <bean id="State2" class="spring_framework.wideskills_com.lesson_11.xml.State">
+        <property name="name" value="United Kingdom" />
+        <property name="countryCode" value="+44" />
+    </bean>
+    <bean id="State3" class="spring_framework.wideskills_com.lesson_11.xml.State">
+        <property name="name" value="India" />
+        <property name="countryCode" value="+91" />
+    </bean>
+
+    <bean id="country" class="spring_framework.wideskills_com.lesson_11.xml.Country">
+        <property name="statesName">
+            <list>
+                <value>United States</value>
+                <value>United Kingdom</value>
+                <value>India</value>
+            </list>
+        </property>
+        <property name="statesList">
+            <list>
+                <ref bean="State1" />
+                <ref bean="State1" />
+                <ref bean="State2" />
+                <ref bean="State3" />
+            </list>
+        </property>
+        <property name="statesSet">
+            <set>
+                <ref bean="State1" />
+                <ref bean="State1" />
+                <ref bean="State2" />
+                <ref bean="State3" />
+            </set>
+        </property>
+    </bean>
+</beans>
