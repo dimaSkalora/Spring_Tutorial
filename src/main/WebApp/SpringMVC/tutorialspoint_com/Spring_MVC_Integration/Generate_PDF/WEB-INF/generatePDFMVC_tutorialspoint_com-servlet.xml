@@ -1,0 +1,16 @@
+<beans xmlns = "http://www.springframework.org/schema/beans"
+       xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation = " http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean class = "org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping" />
+
+    <bean class="spring_mvc.tutorialspoint_com.spring_mvc_integration.generate_pdf.PDFController"/>
+
+    <bean class = "org.springframework.web.servlet.view.XmlViewResolver">
+        <property name = "location">
+            <value>/WEB-INF/views.xml</value>
+        </property>
+    </bean>
+
+</beans>
