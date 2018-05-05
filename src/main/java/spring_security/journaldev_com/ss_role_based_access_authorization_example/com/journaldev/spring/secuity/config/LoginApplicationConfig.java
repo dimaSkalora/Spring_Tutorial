@@ -1,0 +1,25 @@
+package spring_security.journaldev_com.ss_role_based_access_authorization_example.com.journaldev.spring.secuity.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.view.InternalResourceViewResolver;
+import org.springframework.web.servlet.view.JstlView;
+
+@EnableWebMvc //используется для включения веб-безопасности в любом веб-приложении.
+@Configuration
+@ComponentScan({ "spring_security.journaldev_com.ss_role_based_access_authorization_example.com.journaldev.spring.*" })
+@Import(value = { LoginSecurityConfig.class })
+public class LoginApplicationConfig {
+    @Bean
+    public InternalResourceViewResolver viewResolver() {
+        InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
+        viewResolver.setViewClass(JstlView.class);
+        viewResolver.setPrefix("/WEB-INF/views/");
+        viewResolver.setSuffix(".jsp");
+        return viewResolver;
+    }
+
+}
